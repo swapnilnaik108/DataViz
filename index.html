@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SWAPNIL's DATA VIZ PROJ</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+</head>
+<body>
+<h1 > HOWDY</h1>
+<svg width=500 height =500 >
+	<g transform="translate(250 200) rotate (10 10 10) scale (1 2)">
+	<rect width =50 height =50 fill="white"></rect>
+</g>
+</svg>
+<svg width=500 height =500 fill="blue">
+		<circle cx= 250 cy=250 r = 40 ></circle>
+		<circle cx= 350 cy=250 r = 40 ></circle>
+</svg>
+<script type="text/javascript">
+	d3.selectAll("circle").transition().delay(2000).style("fill","yellow").duration(3000)
+	d3.select("circle").transition().delay(2000).style("fill","red").duration(3000)
+	d3.csv("/Users/swap/Desktop/TECH TRAINING/MS DS UIUC/Data Viz/Naiks.csv", function(data) {
+    console.log(data);});
+</script>
+</body>
+</html>
